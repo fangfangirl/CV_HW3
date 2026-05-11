@@ -133,6 +133,16 @@ The table below summarizes the model performance on the validation dataset.
 |------------------|-----------|----------------| ----------------|
 | Deformable DETR  | ResNet-50 |  | 0.5266 |
 
+## Performance Snapshot
+
+The generated prediction file is stored in the cloud. You can download [`test-results.json`]([your_cloud_link_here](https://drive.google.com/file/d/1w_RKsjgI7kx1NwHOfFmjgrQS5_Oog6Z2/view?usp=drive_link)) if needed.
+
+The table below summarizes the model performance.
+
+| Model | Backbone | Best Validation AP50  | Public Leaderboard Score |
+|------|----------|----------------------|---------------------------|
+| Mask R-CNN | ResNet-50 FPN | 0.7188 | 0.5233 |
+
 ### Leaderboard / Final Results
 
 The screenshot below shows the final leaderboard / result for this project:
