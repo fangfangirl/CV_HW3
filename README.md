@@ -4,14 +4,20 @@
 * **Name:** 張周芳
 
 ## Introduction
-This project implements an object detection pipeline for HW2 using a DETR-based architecture with a ResNet-50 backbone.  
-The final model is based on Deformable DETR and is designed to improve detection performance on small RGB images.
+
+This repository contains my implementation for NYCU Computer Vision 2026 HW3.
+
+The task is instance segmentation on microscopic cell images.  
+I use a Mask R-CNN model with a ResNet-50 FPN backbone from `torchvision.models.detection`.
 
 The project includes:
-- A notebook for training the detection model
-- A notebook for inference on the test dataset
-- Validation evaluation using COCO-format metrics
-- Visualization utilities for prediction analysis
+
+- Data analysis notebook
+- Training pipeline notebook
+- Inference pipeline notebook
+- COCO-style validation evaluation
+- Test prediction generation
+- Visualization utilities for checking masks and predictions
 
 ## Dataset
 Place the dataset folder under the following structure:
@@ -23,7 +29,7 @@ CV_HW3/
 │   ├── test_release
 │   └── train
 ├─ checkpoints/
-│   └─ best_ap50_maskrcnn.pth # test mAP model
+│   └─ best_ap50_maskrcnn.pth # test AP50 model
 ├─ cv-hw3-data_analysis.ipynb
 ├─ cv-hw3-training.ipynb
 ├─ cv-hw3-inference.ipynb
@@ -31,12 +37,13 @@ CV_HW3/
 ├─ test-results.json
 └─ requirements.txt
 ```
+
 > Note: he dataset and model files are not included in this repository.
 > Please download or prepare the dataset according to the structure above (e.g., by extracting the provided assignment package).
-> Both the best mAP models can be trained from scratch using the provided notebooks.
+> The best AP50 models can be trained from scratch using the provided notebooks.
 > If you want to skip training and run inference directly, you can download the best trained model from the cloud:    
-> - **Best model:** [model path](https://drive.google.com/file/d/1a4ifemWZ1A1Z6jSpaC0_WIpTkJ-pTO4m/view?usp=sharing)
-> - After downloading, place the checkpoint file at: `./checkpoints_deformable_detr/best_model_by_map.pth`
+> - **Best model:** [model path](https://drive.google.com/file/d/1P5X2FcFVxI3rROxeYrErHvfKLGVY72Kx/view?usp=sharing)
+> - After downloading, place the checkpoint file at: `./checkpoints/best_ap50_maskrcnn.pth`
 
 > On a **local machine**, place the dataset in the same structure and update notebook file paths to match your directories.
 
@@ -106,12 +113,10 @@ The table below summarizes the model performance on the validation dataset.
 
 | Model             | Backbone  | Validation mAP | Test mAP |
 |------------------|-----------|----------------| ----------------|
-| Deformable DETR  | ResNet-50 | 0.4768 | 0.38 |
+| Deformable DETR  | ResNet-50 |  | 0.5266 |
 
 ### Leaderboard / Final Results
 
 The screenshot below shows the final leaderboard / result for this project:
 
 <img width="1735" height="70" alt="image" src="https://github.com/user-attachments/assets/5bc553a2-e282-4717-babc-9c1ae48781ea" />
-
-![result.png](https://github.com/user-attachments/assets/164b7ff1-5433-4428-943a-99b36230a793)
