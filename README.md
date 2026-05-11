@@ -124,14 +124,6 @@ pip install -r requirements.txt
 5. The generated prediction file is saved as `hw3/test-results.json`.
 
 > Note: The trained checkpoint is required for inference.
-## Performance Snapshot
-
-The generated prediction file is stored in the cloud. You can download [`pred.json`](https://drive.google.com/file/d/1tNGEpXK-iZYgnHvPwtPL3892h5V3rmDD/view?usp=sharing) if needed.
-The table below summarizes the model performance on the validation dataset.
-
-| Model             | Backbone  | Validation mAP | Test mAP |
-|------------------|-----------|----------------| ----------------|
-| Deformable DETR  | ResNet-50 |  | 0.5266 |
 
 ## Performance Snapshot
 
