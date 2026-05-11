@@ -135,7 +135,7 @@ The table below summarizes the model performance on the validation dataset.
 
 ## Performance Snapshot
 
-The generated prediction file is stored in the cloud. You can download [`test-results.json`]([your_cloud_link_here](https://drive.google.com/file/d/1w_RKsjgI7kx1NwHOfFmjgrQS5_Oog6Z2/view?usp=drive_link)) if needed.
+The generated prediction file is stored in the cloud. You can download [`test-results.json`](https://drive.google.com/file/d/1w_RKsjgI7kx1NwHOfFmjgrQS5_Oog6Z2/view?usp=drive_link) if needed.
 
 The table below summarizes the model performance.
 
