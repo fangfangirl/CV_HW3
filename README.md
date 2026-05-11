@@ -17,19 +17,18 @@ The project includes:
 Place the dataset folder under the following structure:
 
 ```bash
-CV_HW2/
-├─ nycu-hw2-data/
-│   ├─ train/
-│   ├─ valid/
-│   ├─ test/
-│   ├─ train.json
-│   └─ valid.json
-├─ checkpoints_deformable_detr/
-│   └─ best_model_by_map.pth # test mAP model
-├─ cv-hw2-training.ipynb
-├─ cv-hw2-inference.ipynb
+CV_HW3/
+├─ hw3-data-release/
+│   ├── test_image_name_to_ids.json
+│   ├── test_release
+│   └── train
+├─ checkpoints/
+│   └─ best_ap50_maskrcnn.pth # test mAP model
+├─ cv-hw3-data_analysis.ipynb
+├─ cv-hw3-training.ipynb
+├─ cv-hw3-inference.ipynb
 ├─ README.md
-├─ pred.json
+├─ test-results.json
 └─ requirements.txt
 ```
 > Note: he dataset and model files are not included in this repository.
