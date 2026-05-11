@@ -112,4 +112,6 @@ The table below summarizes the model performance on the validation dataset.
 
 The screenshot below shows the final leaderboard / result for this project:
 
+<img width="1735" height="70" alt="image" src="https://github.com/user-attachments/assets/5bc553a2-e282-4717-babc-9c1ae48781ea" />
+
 ![result.png](https://github.com/user-attachments/assets/164b7ff1-5433-4428-943a-99b36230a793)
