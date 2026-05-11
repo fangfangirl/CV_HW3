@@ -59,17 +59,17 @@ For running this project on your local machine, follow the steps below.
 ### Step 0: Clone the Repository
 
 ```bash
-git clone https://github.com/fangfangirl/CV_HW2.git
-cd CV_HW2
+git clone https://github.com/fangfangirl/CV_HW3.git
+cd CV_HW3
 ```
 ### Step1: Using Conda (Recommended do)
 
 ```bash
 # Create a conda environment
-conda create -n cv-hw2 python=3.11 -y
+conda create -n cv-hw3 python=3.11 -y
 
 # Activate environment
-conda activate cv-hw2
+conda activate cv-hw3
 ```
 ### Step2: Install PyTorch
 
@@ -90,22 +90,40 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Data Analysis
+
+1. Open and run `cv-hw3-data_analysis.ipynb` to check the dataset.
+2. This notebook visualizes training images and masks.
+3. It also provides basic information about the dataset, such as image and mask structure.
+4. This step is optional and is mainly used for understanding the dataset.
+
 ### Training
 
-1. Open and run `cv-hw2-training.ipynb` to train the object detection model.
-2. This notebook trains a Deformable DETR-based model with a ResNet-50 backbone on the training dataset.
-3. During training, the model is evaluated on the validation dataset using COCO-format metrics.
-4. The best checkpoint is saved based on validation performance (e.g., `best_model_by_map.pth`).
+1. Open and run `cv-hw3-training-pipeline_exp3.ipynb` to train the instance segmentation model.
+2. This notebook trains a Mask R-CNN model with a ResNet-50 FPN backbone on the training dataset.
+3. During training, the model is evaluated on the validation dataset.
+4. The best checkpoint is saved based on validation performance.
+5. The saved checkpoint is stored at `hw3/checkpoints/best_ap50_maskrcnn.pth`.
+
+> Note: The training notebook may use `wandb` for logging.  
+> If `wandb` asks for login, you can log in with your own account or disable it by adding:
+>
+> ```python
+> import os
+> os.environ["WANDB_MODE"] = "disabled"
+> ```
+>
+> You can also comment out `wandb.login()` if it appears in the notebook.
 
 ### Inference
 
-- Open and run `cv-hw2-inference.ipynb` to generate predictions on the test dataset.
-- If you want to skip training, you can directly use the pretrained best model checkpoint.
-- Ensure the checkpoint file is placed in the directory specified in the notebook.
-- Make sure the dataset path and checkpoint path are correctly updated before execution.
+1. Open and run `cv-hw3-inference-pipeline.ipynb` to generate predictions on the test dataset.
+2. The notebook loads the trained Mask R-CNN checkpoint.
+3. Ensure the checkpoint file is placed in the directory specified in the notebook.
+4. Make sure the dataset path and checkpoint path are correctly updated before execution.
+5. The generated prediction file is saved as `hw3/test-results.json`.
 
 > Note: The trained checkpoint is required for inference.
-
 ## Performance Snapshot
 
 The generated prediction file is stored in the cloud. You can download [`pred.json`](https://drive.google.com/file/d/1tNGEpXK-iZYgnHvPwtPL3892h5V3rmDD/view?usp=sharing) if needed.
