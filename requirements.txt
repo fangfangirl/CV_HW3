@@ -5,5 +5,5 @@ scikit-image
 pandas
 tqdm
 pycocotools
-wandb
 ipykernel
+wandb
